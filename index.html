@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Avnish">
+<meta name="creator" content="Avnish">
+<meta name="description" content="A special surprise made by Avnish for his Hyderabad wale bhai">
+<title>Avnish's Special Surprise 😂</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ color:white;
+ background:linear-gradient(135deg,#100a22,#351044,#781c61);
+ min-height:100vh;
+ text-align:center;
+}
+.screen{
+ min-height:100vh;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ padding:25px 15px;
+}
+.hidden{display:none!important}
+h1{
+ font-size:clamp(32px,8vw,65px);
+ text-shadow:0 0 20px #ff65b5;
+}
+h2{font-size:clamp(22px,5vw,32px)}
+p{line-height:1.5}
+.card{
+ width:min(650px,95%);
+ padding:25px;
+ border-radius:25px;
+ background:#ffffff16;
+ border:1px solid #ffffff45;
+ box-shadow:0 15px 50px #0006;
+ backdrop-filter:blur(10px);
+}
+button{
+ border:0;
+ border-radius:30px;
+ padding:15px 25px;
+ margin:8px;
+ font-size:16px;
+ font-weight:bold;
+ cursor:pointer;
+ background:linear-gradient(90deg,#ffe28b,#ff78bd);
+ color:#27102d;
+}
+button:hover{transform:scale(1.04)}
+.option{
+ display:block;
+ text-align:left;
+ background:#ffffff18;
+ color:white;
+ border:1px solid #ffffff40;
+ border-radius:15px;
+ padding:16px;
+ margin:12px 0;
+ cursor:pointer;
+ font-weight:bold;
+}
+.option:has(input:checked){
+ background:#ff69b455;
+ border:2px solid #ff8bc8;
+}
+.option input{margin-right:12px;accent-color:#ff75b5}
+.progress{
+ width:100%;
+ height:8px;
+ background:#ffffff30;
+ border-radius:20px;
+ margin:15px 0 25px;
+}
+.bar{
+ height:100%;
+ width:10%;
+ background:#ff86c2;
+ border-radius:20px;
+ transition:.3s;
+}
+.monkey{
+ font-size:clamp(110px,25vw,190px);
+ animation:bounce 1s infinite;
+}
+.bouquet{
+ font-size:clamp(110px,25vw,190px);
+ animation:sway 2s infinite;
+}
+.laugh{font-size:55px;animation:bounce 1s infinite}
+.message{
+ font-size:clamp(20px,4vw,30px);
+ font-weight:900;
+ line-height:1.6;
+ white-space:pre-line;
+}
+@keyframes bounce{
+ 50%{transform:translateY(-15px) rotate(5deg)}
+}
+@keyframes sway{
+ 50%{transform:rotate(8deg) scale(1.05)}
+}
+</style>
+</head>
+
+<body>
+
+<!-- GRAND OPENING -->
+
+<section id="welcome" class="screen">
+ <p>✨ A SPECIAL SURPRISE BY AVNISH ✨</p>
+
+ <h1>YE LAY HYDERABAD WALE BHAIIII! 😂</h1>
+
+ <h2>
+ TERE LIYE BANAYA HU ITNA MEHNAT KARKE
+ </h2>
+
+ <h2 style="color:#ffb0db">
+ (KUCH MEHNAT NHI KIYA 🤣😂)
+ </h2>
+
+ <p style="font-size:45px">🎉 😂 🥳 🤣 🎮</p>
+
+ <button onclick="startQuiz()">CHAL SHURU KAR BHAI 😎</button>
+</section>
+
+
+<!-- QUESTIONS -->
+
+<section id="quiz" class="screen hidden">
+ <div class="card">
+
+  <p id="counter">QUESTION 1 / 10</p>
+
+  <div class="progress">
+   <div class="bar" id="bar"></div>
+  </div>
+
+  <h2 id="question"></h2>
+
+  <div id="options"></div>
+
+  <p id="error"></p>
+
+  <button onclick="previous()">PEECHHE</button>
+  <button onclick="next()">AAGE CHAL 😂</button>
+
+ </div>
+</section>
+
+
+<!-- COMPLETED -->
+
+<section id="finish" class="screen hidden">
+ <div class="card">
+
+  <h1>AREY WAH BHAIIII! 😂</h1>
+
+  <h2>SAARE QUESTIONS COMPLETE!</h2>
+
+  <p>
+  Tumhare answers Avnish ko bhejne ke liye
+  neeche button dabao.
+  </p>
+
+  <p>
+  Tumhare answers Avnish ke saath share honge.
+  </p>
+
+  <button onclick="shareAnswers()">
+  ANSWERS BHEJ AVNISH KO 😂
+  </button>
+
+  <button onclick="showSurprise()">
+  AB ASLI SURPRISE DEKH 😈
+  </button>
+
+  <p id="shareStatus"></p>
+
+ </div>
+</section>
+
+
+<!-- SPECIAL SURPRISE -->
+
+<section id="surprise" class="screen hidden">
+
+ <div class="card">
+
+  <h1>🎁 SPECIAL SURPRISE 🎁</h1>
+
+  <div class="message">
+KYA BE LOUREE YE MAT SAMJHNA KI EMOTIONAL BAAT KAR RHA HU
+
+GAANDWEE ME TOH BAS YUHI PUCHH RHA THA !! DEKH DEKH KAISE KHUS HO GYA THAA
+
+HTT GAANDWEE !1 HAHAHAHA!!!!!!
+
+BOL JAYY BAPPPA KIII
+  </div>
+
+  <div class="monkey">🐒</div>
+
+  <div class="laugh">🤣😂🤣</div>
+
+ </div>
+
+ <br>
+
+ <!-- ROSE BOUQUET -->
+
+ <div class="card">
+
+  <h1>YE LE ROSE PAKAD 🌹</h1>
+
+  <div class="bouquet">💐</div>
+
+  <div style="font-size:45px">
+   🌹🌹🌹🌹🌹
+  </div>
+
+  <h1>GAAANDMARA 🤣</h1>
+
+  <div class="laugh">😂🤣😂🤣</div>
+
+  <h2>HAHAHAHAHAHA!!!</h2>
+
+  <p>— AVNISH ❤️</p>
+
+ </div>
+
+ <button onclick="location.reload()">
+ PHIR SE DEKH BHAI 😂
+ </button>
+
+</section>
+
+
+<script>
+
+// ALL QUESTIONS AND OPTIONS
+
+const questions = [
+
+{
+q:"KYA HAAL HAI BHAIIII!",
+o:[
+"BADHIYA",
+"THIK THAK",
+"MAST",
+"THORA KHARAB"
+]
+},
+
+{
+q:"AGAR FIRSE MOUKA MILE SATH ME GAME KHELNE KA PURA NIGHT PEHLE KI TARAH TOH KYA TU KHELNA PASAND KREGA??",
+o:[
+"SHAYAD",
+"HAAN YRR BILKUL",
+"NHII BE AB KON KREGA WO BKCHODI"
+]
+},
+
+{
+q:"MISS NHI KRTA BHAI ?",
+o:[
+"NHI BE",
+"HAAN THORA THORA",
+"ABE YAAD BHI NHI AATA",
+"HNN KRTA HU NA"
+]
+},
+
+{
+q:"CHAL CHHOR YE SAB TU IN SAB ME SE KAY KAREGA?",
+o:[
+"EK SATH BETH KE GAME KHELE PURI NIGHT!!",
+"SQUAD FULL KARKE 3 LARKI KE SATH KHELUNGA",
+"APNI DOSTO KE SATH CHILL KARUNGAA"
+]
+},
+
+{
+q:"AGAR SHAYAD SAB EK SATH MIL GYE TOH KYA KAREGA?",
+o:[
+"MAST GHUMENGE NIHTOUT PE JAAYENGE EK DIN",
+"SAB MILKE LONG DRIVE PE JAAENGE JAGAH JAGAH GHUYMNE JAAYENGE BIKE SE",
+"EK JAGAH PE KHANA WANA KHAAYENGE OR FIR SAB APNE RASTE"
+]
+},
+
+{
+q:"CHHOR YE BATA IN SAB ME SE KYA PASAND HAI KHANE ME?",
+o:[
+"HYDERABADI CHICKEN BIRYANI",
+"SWEETS",
+"MUTTON",
+"NORMAL KHANA"
+]
+},
+
+{
+q:"IN SAB ME SE KON SA DESH JAANA CHHAHEGA?",
+o:[
+"RUSSIA",
+"THAILAND",
+"DUBAI",
+"NEPAL",
+"INME SE KAHI NHI KISI AUR DESH JAAUJNGA!!"
+]
+},
+
+{
+q:"AGAR EK SATH HUMARA GROUP MEETUP HUA TOH?",
+o:[
+"DUSRE DESH JAAYENGE!",
+"PURA HYDERABAD GHUMENGE",
+"PURA INDIA GHUMENGE BIKE SE !!"
+]
+},
+
+{
+q:"KABHI BHUL TOH NHI JAAYEGA NA BHAI?",
+o:[
+"HAAN",
+"BILKUL NHI",
+"SHAYAD HO SAKTA HAI"
+]
+},
+
+{
+q:"KABHI BHI GUSSA KARIYO TOH MAN JAIYO BHAIII!!",
+o:[
+"NHI MAANUNGA",
+"HAAN MAAN JAUNGA",
+"GUSSA KARUNGA TOH BATA DUNGAA"
+]
+}
+
+];
+
+let current=0;
+let answers=Array(questions.length).fill(null);
+
+
+// SCREEN CONTROL
+
+function showScreen(id){
+ document.querySelectorAll(".screen").forEach(s=>{
+  s.classList.add("hidden");
+ });
+ document.getElementById(id).classList.remove("hidden");
+ window.scrollTo(0,0);
+}
+
+
+// START
+
+function startQuiz(){
+ current=0;
+ renderQuestion();
+ showScreen("quiz");
+}
+
+
+// DISPLAY QUESTION
+
+function renderQuestion(){
+
+ let q=questions[current];
+
+ document.getElementById("counter").innerText=
+ "QUESTION "+(current+1)+" / "+questions.length;
+
+ document.getElementById("question").innerText=q.q;
+
+ document.getElementById("bar").style.width=
+ ((current+1)/questions.length*100)+"%";
+
+ document.getElementById("error").innerText="";
+
+ let area=document.getElementById("options");
+ area.innerHTML="";
+
+ q.o.forEach((option,index)=>{
+
+  let label=document.createElement("label");
+  label.className="option";
+
+  let radio=document.createElement("input");
+  radio.type="radio";
+  radio.name="answer";
+  radio.value=index;
+
+  if(answers[current]===index){
+   radio.checked=true;
+  }
+
+  radio.onchange=()=>{
+   answers[current]=index;
+  };
+
+  label.appendChild(radio);
+  label.appendChild(document.createTextNode(option));
+
+  area.appendChild(label);
+
+ });
+
+}
+
+
+// NEXT
+
+function next(){
+
+ if(answers[current]===null){
+  document.getElementById("error").innerText=
+  "PEHLE EK OPTION CHOOSE KAR BHAI 😂";
+  return;
+ }
+
+ if(current<questions.length-1){
+  current++;
+  renderQuestion();
+ }else{
+  showScreen("finish");
+ }
+
+}
+
+
+// PREVIOUS
+
+function previous(){
+
+ if(current>0){
+  current--;
+  renderQuestion();
+ }
+
+}
+
+
+// ANSWER REPORT
+
+function makeReport(){
+
+ let report="AVNISH KE LIYE ANSWERS 😂\n\n";
+
+ questions.forEach((q,i)=>{
+
+  report+=(i+1)+". "+q.q+"\n";
+
+  report+="Answer: "+
+  (answers[i]===null?"No answer":q.o[answers[i]])+
+  "\n\n";
+
+ });
+
+ return report;
+
+}
+
+
+// SHARE ANSWERS
+
+async function shareAnswers(){
+
+ let text=makeReport();
+
+ try{
+
+  if(navigator.share){
+
+   await navigator.share({
+    title:"Answers for Avnish",
+    text:text
+   });
+
+   document.getElementById("shareStatus").innerText=
+   "Share menu khul gaya! Avnish ko bhej dena 😂";
+
+  }else{
+
+   await navigator.clipboard.writeText(text);
+
+   document.getElementById("shareStatus").innerText=
+   "Answers copy ho gaye! Avnish ko paste karke bhej do.";
+
+  }
+
+ }catch(error){
+
+  document.getElementById("shareStatus").innerText=
+  "Share cancel ho gaya. Dobara try kar sakte ho.";
+
+ }
+
+}
+
+
+// SURPRISE
+
+function showSurprise(){
+ showScreen("surprise");
+}
+
+</script>
+
+</body>
+</html>
